@@ -41,6 +41,44 @@ git stash
 ```
 
 ## Branches:
-An advantage of Github is its ability to have different versions of your project ready to go. Say you wanted to take your project and solve a problem multiple different ways that would interfer with each other. You can create different branches to accomplish this. Bracnhes are children of a commit, which use the parent as starting point from which the changes unique to the branch are made. Advantages of branches include explore different paths to creating tools, allowing different people to work on differet parts of a project without messing with each other, or keeping a previous version thatg is safe from whever disater you have have caused that breaks your code to the point where you would have to otherwise start over from the beginning.
-
+An advantage of Github is its ability to have different versions of your project ready to go. Say you wanted to take your project and solve a problem multiple different ways that would interfer with each other. You can create different branches to accomplish this. Bracnhes are children of a commit, which use the parent as starting point from which the changes unique to the branch are made. Advantages of branches include explore different paths to creating tools, allowing different people to work on differet parts of a project without messing with each other, or keeping a previous version thatg is safe from whever disater you have have caused that breaks your code to the point where you would have to otherwise start over from the beginning. You can type `git branch <branchname>` to create a branch with a name.
+```
+git branch <branchname>
+```
+To delete a branch type `git branch -d <branchname>`.
+```
+git branch -d <branchname>
+```
 ## Merging:
+Branches are great but what if you want to combine changes in your branch back to the main, you can do a merge. All you need to do is use `git merge <branchname>` and the branch will be merge into the main.
+```
+git merge <branchname>
+```
+This will work great if you have one branch being merged, but problems may occur if you have two bracnhes with conflicting code. You will need to clean up your code to make sure that nothing is conflicting to complete the merge.
+For example if you two branches with a variable added to Main.java with slightly different code you have a conflict if you tried to merge into main.
+Branch A:
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("I hate java with a passion...");
+        //Add another fun and engaging print statemnt
+        System.out.println("But javascript is even worse");
+        
+        //check out my awesome variable
+        int x = 1;
+    }
+}
+```
+Branch B:
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("I hate java with a passion...");
+        //Add another fun and engaging print statemnt
+        System.out.println("But javascript is even worse");
+        
+        //check out my awesome variable
+        int x = 0;
+    }
+}
+```
