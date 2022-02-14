@@ -5,7 +5,7 @@ Github is an excellent tool for the purpose of coding a project. While it may se
 ## Basic Commands
 The flow of working on a project with Github revolves around working with a ***local repository*** and a ***remote repository***. The ***local repository*** is the project and its files stored on your computer. The ***remote repository*** is the project stored on your Github. With four easy commands `git clone [url]`, `git add filename`, `git commit -m`, and `git push`. In this tutorial we have provided a basic project to follow along with. If you so desire you can fork this repo with ***fork*** button in the top right corner to follow along.
 
-Now it's time to clone the repository. Cloning a repository is what creates the ***local repository*** from the original ***remote repository***. For this tutorial we will be exploring the use of the command because it is widely used in the ***real world*** and it makes you look smarter than you actually are. To clone a repo put `git clone [url]` into the command line. The url for a repo can be accessed on the clone button in a repository, click to copy then paste into terminal.
+Now it's time to clone the repository. Cloning a repository is what creates the ***local repository*** from the original ***remote repository***. For this tutorial we will be exploring the use of the command because it is widely used in the ***real world*** and it makes you look smarter than you actually are. To clone a repo, put `git clone [url]` into the command line. The url for a repo can be accessed on the clone button in a repository, click to copy then paste into terminal.
 ```
 git clone [url]
 ```
@@ -15,9 +15,9 @@ Example:
 ```java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("I hate java with a passion...");
+        System.out.println("XD");
         //Add another fun and engaging print statement
-        System.out.println("But javascript is even worse");
+        System.out.println(";)");
     }
 }
 ```
@@ -34,7 +34,7 @@ The -m refers to the required message that must be put on every commit, recommon
 git push
 ```
 ## Branches
-An advantage of Github is its ability to have different versions of your project ready to go. Say you wanted to take your project and solve a problem multiple different ways that would interfere with each other. You can create a ***branch*** to accomplish this. ***Branches*** are children of a commit, which use the parent as starting point from which the changes unique to the branch are made. Advantages of ***branches*** include explore different paths to creating tools, allowing different people to work on different parts of a project without messing with each other, or keeping a previous version that is stable. You can type `git branch <branchname>` to create a ***branch*** with a name.
+An advantage of Github is its ability to have different versions of your project ready to go. Say you wanted to take your project and solve a problem multiple different ways that would interfere with each other. You can create a ***branch*** to accomplish this. ***Branches*** are children of a commit, which use the parent as a starting point from which the changes unique to the branch are made. Advantages of ***branches*** include exploring different paths to creating tools, allowing different people to work on different parts of a project without messing with each other, or keeping a previous version that is stable. You can type `git branch <branchname>` to create a ***branch*** with a name.
 ```
 git branch <branchname>
 ```
@@ -62,9 +62,9 @@ Branch A:
 ```java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("I hate java with a passion...");
+        System.out.println("XD");
         //Add another fun and engaging print statement
-        System.out.println("But javascript is even worse");
+        System.out.println(";)");
         
         //check out my awesome variable
         int x = 1;
@@ -75,9 +75,9 @@ Branch B:
 ```java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("I hate java with a passion...");
+        System.out.println("XD");
         //Add another fun and engaging print statement
-        System.out.println("But javascript is even worse");
+        System.out.println(";)");
         
         //check out my awesome variable
         int x = 0;
