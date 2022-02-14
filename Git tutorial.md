@@ -1,6 +1,6 @@
 # Github Tutorial
 
-Github is an excellent tool for the purpose of coding a project. While it may seem intimidating at first, this .md file will give you everything you need to know about the basics of Github. This tutorial covers the basic commands for uploading files to a repository, stashes, branches, and merging.
+Github is an excellent tool for the purpose of coding a project. While it may seem intimidating at first, this .md file will give you everything you need to know about the basics of Github. This tutorial covers the basic commands for uploading files to a repository, branches, stashes, and merging.
 
 ## Basic Commands
 The flow of working on a project with Github revolves around working with a ***local repository*** and a ***remote repository***. The ***local repository*** is the project and its files stored on your computer. The ***remote repository*** is the project stored on your Github. With four easy commands `git clone [url]`, `git add filename`, `git commit -m`, and `git push`. In this tutorial we have provided a basic project to follow along with. If you so desire you can fork this repo with ***fork*** button in the top right corner to follow along.
@@ -33,29 +33,30 @@ The -m refers to the required message that must be put on every commit, recommon
 ```
 git push
 ```
-
-## Stashes:
-Great, now you have mastered the Github workflow but there is still knowledge to be learned. Hypothetically let's say that you want to add another piece of code to the project, but you do not want it to commit it to the repo but you still want it to be saved. Good, because you can use the `git stash` command to save code temporarily without doing a commit.
-```
-git stash
-```
-
-## Branches:
-An advantage of Github is its ability to have different versions of your project ready to go. Say you wanted to take your project and solve a problem multiple different ways that would interfere with each other. You can create different branches to accomplish this. Branches are children of a commit, which use the parent as starting point from which the changes unique to the branch are made. Advantages of branches include explore different paths to creating tools, allowing different people to work on different parts of a project without messing with each other, or keeping a previous version that is stable. You can type `git branch <branchname>` to create a branch with a name.
+## Branches
+An advantage of Github is its ability to have different versions of your project ready to go. Say you wanted to take your project and solve a problem multiple different ways that would interfere with each other. You can create a ***branch*** to accomplish this. ***Branches*** are children of a commit, which use the parent as starting point from which the changes unique to the branch are made. Advantages of ***branches*** include explore different paths to creating tools, allowing different people to work on different parts of a project without messing with each other, or keeping a previous version that is stable. You can type `git branch <branchname>` to create a ***branch*** with a name.
 ```
 git branch <branchname>
 ```
-To delete a branch type `git branch -d <branchname>`.
+To delete a ***branch*** type `git branch -d <branchname>`.
 ```
 git branch -d <branchname>
 ```
-## Merging:
-Branches are great but what if you want to combine changes in your branch back to the main, you can do a merge. All you need to do is use `git merge <branchname>` and the branch will be merged into the main.
+## Stashes
+Great, now you have mastered ***branches*** but there is still more to know. Hypothetically let's say that you want to add another piece of code to the project, but you do not want it to commit it to the repo but you still want it to be saved. Good, because you can use the `git stash` command to save code temporarily without doing a commit. This creates a ***stash***, which is a temporary ***branch*** that is a snapshot of current changes that have not been committed yet.
+```
+git stash
+```
+To save changes in a ***stash*** use the `git stash pop` command.
+```
+git stash pop
+```
+## Merging
+***Branches*** are great but what if you want to combine changes in your ***branch*** back to the main, you can do a ***merge***. All you need to do is use `git merge <branchname>` and the ***branch*** will be ***merged*** into the main.
 ```
 git merge <branchname>
 ```
-This will work great if you have one branch being merged, but problems may occur if you have two bracnhes with conflicting code. You will need to clean up your code to make sure that nothing is conflicting to complete the merge.
-For example if you have two branches with a variable added to Main.java with slightly different code you have a conflict if you try to merge into main.
+This will work great if you have one ***branch*** being ***merged***, but problems may occur if you have two ***branches*** with conflicting code. You will need to clean up your code to make sure that nothing is conflicting to complete the ***merge***. For example if you have two ***branches*** with a variable added to Main.java with slightly different code you have a conflict if you try to ***merge*** into main.
 
 Branch A:
 ```java
